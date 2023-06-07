@@ -6,13 +6,13 @@
 
  * Если мы хотим добавить модуль следует его раскомментировать
  */
-import {
-  isWebp,
-  headerFixed,
-  togglePopupWindows,
-  addTouchClass,
-  addLoadedClass,
-} from './modules';
+// import {
+//   isWebp,
+//   headerFixed,
+//   togglePopupWindows,
+//   addTouchClass,
+//   addLoadedClass,
+// } from './modules';
 
 // import BurgerMenu from './modules/BurgerMenu';
 
@@ -27,7 +27,7 @@ import {
 /* Проверка поддержки webp, добавление класса webp или no-webp для HTML
  ! (i) необходимо для корректного отображения webp из css
  */
-isWebp();
+// isWebp();
 
 /* Добавление класса touch для HTML если браузер мобильный */
 // addTouchClass();
@@ -62,3 +62,11 @@ isWebp();
 // togglePopupWindows();
 
 // const tabs = new Tabs('default-tabs', {});
+
+const heroBoxs = document.querySelectorAll('.hero__box');
+heroBoxs.forEach(heroBox => {
+  const heroBoxClose = heroBox.querySelector('.hero__box-close');
+  heroBoxClose.addEventListener('click', () => {
+    heroBox.style.display = 'none';
+  })
+})
